@@ -1,0 +1,13 @@
+environments:
+- name: acceptance
+- name: production
+service:
+  name: extension
+  port: 80
+  healthEndpoint: / 
+  pathPatterns:
+  - /*
+  pipeline:
+    source:
+      provider: GitHub
+      repo: thephillipsequation/StelligentMu-Demo
